@@ -32,28 +32,68 @@ alert(+a + +b);
 // Задание 5:
 let monthNumber = prompt('Введите номер месяца');
 switch (monthNumber) {
+    case "12":
     case "1":
     case "2":
-    case "3":
         console.log('зима');
         break;
-    case "41":
+    case "3":
+    case "4":
     case "5":
-    case "6":
         console.log('весна');
         break;
+    case "6":
     case "7":
     case "8":
-    case "9":
         console.log('лето');
-        break;        
+        break;
+    case "9":
     case "10":
     case "11":
-    case "12":
         console.log('осень');
-        break;        
+        break;
     default: console.log('Неверный номер месяца');
         break;
 }
 
 // Задание 7:
+let userInput = prompt('Пожалуйста, введите любое число');
+
+if (!isNaN(userInput)) {
+    let number = (userInput);
+
+    if (number % 2 === 0) {
+        alert('Число четное');
+    } else {
+        alert('Число нечетное');
+    }
+
+} else {
+    alert('Вы ввели не число');
+}
+
+// Задание 8:
+let clientOS = 1
+clientOS === 0 ? console.log('Установите версию приложения для iOS по ссылке') : console.log('Установите версию приложения для Android по ссылке');
+
+// Или так:
+let clientOS1 = 1;
+let OS;
+
+if (clientOS1 === 0) {
+    OS = 'iOS';
+} else {
+    OS = 'Android';
+}
+
+alert(`Установите версию приложения для ${OS} по ссылке`);
+
+// Задание 9:
+let clientOS2 = 'Android'; 
+let clientDeviceYear = 2015; 
+
+if (clientDeviceYear >= 2015) {
+    alert(`Установите версию приложения для ${clientOS2} по ссылке`);
+} else {
+    alert(`Установите облегченную версию приложения для ${clientOS2} по ссылке`);
+}
