@@ -1,4 +1,9 @@
-@media (max-width: 599px) {
+@media (max-width: 599px) {    
+    svg {
+        width: 344px;
+        height: 236px;
+    }
+
     .center {
         padding-left: 20px;
         padding-right: 20px;    
@@ -40,6 +45,27 @@
 
     .gamecard {
         width: 343px;
+    }
+
+    .seasons {
+        height: 654px;
+        align-items: center;
+        margin-right: 0px;    
+        
+        &__descr_head {
+            font-size: 32px;
+        }
+        
+        &__descr_gameDescr {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 32px;
+            text-align: center;
+            line-height: 22px;
+        }
+        
+    
+    
     }
 
 }

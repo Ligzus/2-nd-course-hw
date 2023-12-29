@@ -52,7 +52,7 @@
     }
 }
 
-.header__button {
+.button {
     width: 234.063px;
     height: 48.603px;
     border-radius: 30px;
@@ -121,6 +121,41 @@
 
 .gamecard__3 {
     background-image: url(img/Rectangle\ 8.jpg)
-}        
+}
+
+.seasons {
+    background: #000915;;
+    height: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-right: 135px;
+
+        &_head {
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        
+        &_gameDescr {
+            color: #FFF;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 32px;
+        }
+    }
+
+
+}
 
 @import 'mobile'

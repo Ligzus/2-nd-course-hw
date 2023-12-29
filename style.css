@@ -48,7 +48,7 @@
   font-weight: bold;
 }
 
-.header__button {
+.button {
   width: 234.063px;
   height: 48.603px;
   border-radius: 30px;
@@ -119,7 +119,42 @@
   background-image: url(img/Rectangle\ 8.jpg);
 }
 
+.seasons {
+  background: #000915;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.seasons__descr {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 584 px;
+  margin-right: 135px;
+}
+.seasons__descr_head {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.seasons__descr_gameDescr {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+
 @media (max-width: 599px) {
+  svg {
+    width: 344px;
+    height: 236px;
+  }
   .center {
     padding-left: 20px;
     padding-right: 20px;
@@ -154,5 +189,26 @@
   }
   .gamecard {
     width: 343px;
+  }
+  .seasons {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .seasons__descr {
+    display: flex;
+    flex-direction: column;
+  }
+  .seasons__descr_head {
+    font-size: 32px;
+  }
+  .seasons__descr_gameDescr {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+    line-height: 22px;
   }
 }/*# sourceMappingURL=style.css.map */
