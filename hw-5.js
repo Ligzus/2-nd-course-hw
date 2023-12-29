@@ -111,6 +111,21 @@ console.log(circle2.getArea());
 console.log(circle2.getPerimeter());
 
 
-// Задание 8:
+// Задание 8 (для удобства и скорости проверки ДЗ оставил в основном js с задачами, при этом п.8 вызывается ко кнопке на сайте)
+function numOfseasons() {
+    let userNumber = prompt('Введите номер месяца:');
+    
+    if (userNumber == 1 || userNumber == 2 || userNumber == 12) {
+        alert('зима');      
+    } else if (userNumber == 3 || userNumber == 4 || userNumber == 5) {
+        alert('весна');
+    } else if (userNumber == 6 || userNumber == 7 || userNumber == 8) {
+        alert('лето');
+    } else if (userNumber == 9 || userNumber == 10 || userNumber == 11) {
+        alert('осень');
+    } else {
+        alert('Вы ввели неверное значение');
+    }
+}
 
-
+numOfseasons();

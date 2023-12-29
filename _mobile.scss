@@ -1,4 +1,4 @@
-@media (max-width: 599px) {    
+@media (max-width: 900px) {    
     svg {
         width: 344px;
         height: 236px;
@@ -49,22 +49,32 @@
 
     .seasons {
         height: 654px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        margin-right: 0px;    
+        margin-right: 0px; 
+
         
-        &__descr_head {
-            font-size: 32px;
+        &__descr {
+            align-items: center;
+
+            &_head {
+                font-size: 32px;
+                text-align: center;
+            }
+            
+            &_gameDescr {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 32px;
+                text-align: center;
+                margin-right: 0;
+            }
         }
-        
-        &__descr_gameDescr {
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 32px;
-            text-align: center;
-            line-height: 22px;
+
+        &__img {
+            margin-bottom: 85px;
         }
-        
-    
     
     }
 
