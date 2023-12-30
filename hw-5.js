@@ -24,8 +24,12 @@ console.log(result3);
 
 // Задание 3:
 // 3.1:
-let square = (a) => a ** 2;
-console.log(square(4)); // я сам додумался о такой записи, нигде ее не видел в уроках, получилось супер кратко
+function square(a) {
+    const sqr = a ** 2;
+    console.log(sqr);
+}
+
+square(5);
 
 // 3.2:
 function square2(n) {
@@ -40,7 +44,7 @@ console.log(result4)
 function sayHello() {
     let age = prompt('Сколько Вам лет?');
 
-    if (age < 0 || isNaN(age)) {
+    if (age < 0 || isNaN(age) || age === null || age.trim() === "") {
         console.log('Вы ввели неверное значение')        
     } else if (age <= 12) {
         console.log('Привет, друг!')        
@@ -54,23 +58,25 @@ sayHello();
 
 // Задание 5:
 function nums(a, b) {
-    let mult = a * b;
-
     if (isNaN(a) || isNaN(b)) {
-        console.log(`Одно или оба значения не являются числом`);
-    } else {
-        console.log(mult);
+        return 'Одно или оба значения не являются числом';
     }
+
+    if (a === null || a.toString().trim() === "" || b === null || b.toString().trim() === "") {
+        return 'Одно или оба значения не являются числом';
+    }  
+
+    return a * b;
 }
 
-nums(4, 5);
-nums('гыг', 5);
+console.log(nums(4, 5));
+console.log(nums('gyg', 5));
 
 // Задание 6:
 function cube() {
     let userNums = prompt(`Введите число:`)
 
-    if (isNaN(userNums)) {
+    if (isNaN(userNums) || userNums === null || userNums.trim() === "") {
         console.log(`Одно или оба значения не являются числом`);
     } else {
         console.log(userNums ** 3);
@@ -82,46 +88,45 @@ cube();
 
 
 // Задание 7:
-// Круг 1
-let circle1 = {
-    radius: 5,
-    getArea: function() {
-        return `Площадь круга 1 равна ${this.radius ** 2 * Math.PI}`;
-    },
-    getPerimeter: function() {
-        return `Периметр круга 1 равен ${this.radius * 2 * Math.PI}`;
-    }
-};
+function createCircle(radius) {
+    return {
+        radius: radius,
 
-console.log(circle1.getArea());
-console.log(circle1.getPerimeter());
+        getArea: function() {
+            return Math.PI * this.radius ** 2;
+        },
 
-// Круг 2
-let circle2 = {
-    radius: 10,
-    getArea: function() {
-        return `Площадь круга 2 равна ${this.radius ** 2 * Math.PI}`;
-    },
-    getPerimeter: function() {
-        return `Периметр круга 2 равен ${this.radius * 2 * Math.PI}`;
-    }
-};
+        getPerimeter: function() {
+            return 2 * Math.PI * this.radius;
+        }
+    };
+}
 
-console.log(circle2.getArea());
-console.log(circle2.getPerimeter());
+let circle1 = createCircle(5);
+let circle2 = createCircle(8);
+
+console.log('Площадь первого круга:', circle1.getArea());
+console.log('Периметр первого круга:', circle1.getPerimeter());
+
+console.log('Площадь второго круга:', circle2.getArea());
+console.log('Периметр второго круга:', circle2.getPerimeter());
+
+
 
 
 // Задание 8 (для удобства и скорости проверки ДЗ оставил в основном js с задачами, при этом п.8 вызывается ко кнопке на сайте)
 function numOfseasons() {
     let userNumber = prompt('Введите номер месяца:');
+
+    userNumber = parseInt(userNumber);
     
-    if (userNumber == 1 || userNumber == 2 || userNumber == 12) {
+    if (userNumber === 1 || userNumber === 2 || userNumber === 12) {
         alert('зима');      
-    } else if (userNumber == 3 || userNumber == 4 || userNumber == 5) {
+    } else if (userNumber === 3 || userNumber === 4 || userNumber === 5) {
         alert('весна');
-    } else if (userNumber == 6 || userNumber == 7 || userNumber == 8) {
+    } else if (userNumber === 6 || userNumber === 7 || userNumber === 8) {
         alert('лето');
-    } else if (userNumber == 9 || userNumber == 10 || userNumber == 11) {
+    } else if (userNumber === 9 || userNumber === 10 || userNumber === 11) {
         alert('осень');
     } else {
         alert('Вы ввели неверное значение');
